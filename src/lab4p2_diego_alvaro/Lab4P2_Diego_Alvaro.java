@@ -165,6 +165,7 @@ public class Lab4P2_Diego_Alvaro {
                            float ataquespiderman=spidermans.get(i).getAtaque();
                         while(true){
                            vidaspiderman-=ataqueenemigo;
+                           System.out.println(enemigos.get(i).getNombre() + " ataco a " + spidermans.get(i).getNombre() + " haciendole " + enemigos.get(i).getAtaque() + " y dejandolo a " + vidaspiderman + " de vida.");
                            if(vidaspiderman<=0){
                                ganadorenemigo=ganadorenemigo+1;
                                break;
@@ -176,7 +177,6 @@ public class Lab4P2_Diego_Alvaro {
                                break;
                            }
                         }
-                        System.out.println(spidermans.get(i).getNombre() + " ataco a " + enemigos.get(i).getNombre() + " haciendole " + spidermans.get(i).getAtaque() + " y dejandolo a " + vidaenemigo + " de vida.");
                     }
                 } catch (Exception e) {
                         System.out.println("Ocurrio un error, contacte a un administrador.");
