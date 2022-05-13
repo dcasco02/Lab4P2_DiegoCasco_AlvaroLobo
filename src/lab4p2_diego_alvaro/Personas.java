@@ -9,9 +9,9 @@ package lab4p2_diego_alvaro;
  *
  * @author dcasc
  */
-public class Personas {
+public abstract class Personas {
     private String nombre;
-    private int ataque;
+    protected float ataque;
     private int vida;
     private String nombreuniverso;
 
@@ -33,11 +33,11 @@ public class Personas {
         this.nombre = nombre;
     }
 
-    public int getAtaque() {
+    public float getAtaque() {
         return ataque;
     }
 
-    public void setAtaque(int ataque) {
+    public void setAtaque(float ataque) {
         this.ataque = ataque;
     }
 
@@ -61,5 +61,5 @@ public class Personas {
     public String toString() {
         return "Personas{" + "nombre=" + nombre + ", ataque=" + ataque + ", vida=" + vida + ", nombreuniverso=" + nombreuniverso + '}';
     }
-            
+    public abstract float ataque();       
 }
