@@ -43,9 +43,9 @@ public class Enemigos extends Personas {
     }
     public float ataque(){
         if(tipo=="Blindado"){
-            return (float) (ataque*0.10);
+            return (float) (ataque*1.10);
         }else if(tipo=="Alienigena"){
-            return (float)((float)ataque*0.30);
+            return (float)((float)ataque*1.30);
         }
         return ataque;
     }

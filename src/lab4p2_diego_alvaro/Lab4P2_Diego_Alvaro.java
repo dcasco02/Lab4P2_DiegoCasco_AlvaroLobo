@@ -152,13 +152,29 @@ public class Lab4P2_Diego_Alvaro {
                 case 4:
                     break;
                 case 5:
+                    int ganadorenemigo=0;
+                    int ganospiderman=0;
                     try {
                     //desordena ambas listas
                     Collections.shuffle(enemigos);
                     Collections.shuffle(spidermans);
- 
-                    
                     for (int i = 0; i < 5; i++) {
+                           int vidaenemigo=enemigos.get(i).getVida();
+                           int vidaspiderman=spidermans.get(i).getVida();
+                           float ataqueenemigo=enemigos.get(i).getAtaque();
+                           float ataquespiderman=spidermans.get(i).getAtaque();
+                        while(true){
+                           vidaspiderman-=ataqueenemigo;
+                           if(vidaspiderman<=0){
+                               break;
+                               ganadorenemigo=ganadorenemigo+1;
+                           }
+                           vidaenemigo-=ataquespiderman;
+                           if(vidaenemigo<=0){
+                               break;
+                               ganospiderman=+1;
+                           }
+                        }
                         System.out.println(spidermans.get(i).getNombre() + " ataco a " + enemigos.get(i).getNombre() + " haciendole " + spidermans.get(i).getAtaque() + " y dejandolo a " + enemigos.get(i).getVida() + " de vida.");
                     }
                 } catch (Exception e) {

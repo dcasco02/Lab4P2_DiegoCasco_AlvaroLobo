@@ -49,11 +49,11 @@ public class Spiderman extends Personas {
     
     public float ataque(){
         if(tipo=="Spider Punk"){
-            return (float) (ataque*0.15);
+            return (float) (ataque*1.15);
         }else if(tipo=="Superior Spiderman"){
             int random;
             random=10+r.nextInt(30);
-            random=random/10;
+            random=random/100+1;
             return (float)ataque*random;
         }
         return ataque;
