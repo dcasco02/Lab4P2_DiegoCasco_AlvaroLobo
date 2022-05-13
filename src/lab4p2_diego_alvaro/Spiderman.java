@@ -14,7 +14,6 @@ import java.util.Random;
 public class Spiderman extends Personas {
     private String tipo;
     Random r=new Random();
-
     public Spiderman() {
         super();
     }
@@ -23,10 +22,35 @@ public class Spiderman extends Personas {
         super(nombre, ataque, vida, nombreuniverso);
         this.tipo = tipo;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public Random getR() {
+        return r;
+    }
+
+    public void setR(Random r) {
+        this.r = r;
+    }
+
+    public float getAtaque() {
+        return ataque;
+    }
+
+    public void setAtaque(float ataque) {
+        this.ataque = ataque;
+    }
+    
     public float ataque(){
-        if(tipo=="Spider_Punk"){
+        if(tipo=="Spider Punk"){
             return (float) (ataque*0.15);
-        }else if(tipo=="Superior-Spiderman"){
+        }else if(tipo=="Superior Spiderman"){
             int random;
             random=10+r.nextInt(30);
             random=random/10;
