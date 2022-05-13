@@ -166,13 +166,13 @@ public class Lab4P2_Diego_Alvaro {
                         while(true){
                            vidaspiderman-=ataqueenemigo;
                            if(vidaspiderman<=0){
-                               break;
                                ganadorenemigo=ganadorenemigo+1;
+                               break;
                            }
                            vidaenemigo-=ataquespiderman;
                            if(vidaenemigo<=0){
+                               ganospiderman+=1;
                                break;
-                               ganospiderman=+1;
                            }
                         }
                         System.out.println(spidermans.get(i).getNombre() + " ataco a " + enemigos.get(i).getNombre() + " haciendole " + spidermans.get(i).getAtaque() + " y dejandolo a " + enemigos.get(i).getVida() + " de vida.");
